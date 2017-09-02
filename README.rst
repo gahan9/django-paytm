@@ -21,11 +21,11 @@ Quick start
     url(r'^paytm/', include('paytm.urls')),
 
 3. Put below variables into your settings file.
-    ```
-    PAYTM_MERCHANT_KEY=  "<YOUR-PAYTM-MERCHANT-KEY>"
-    PAYTM_MERCHANT_ID = "<YOUR-PAYTM-MERCHANT-ID>"
-    PAYTM_CALLBACK_URL = "http://localhost:8000/response/"
-    ```
+
+    `PAYTM_MERCHANT_KEY=  "<YOUR-PAYTM-MERCHANT-KEY>"`
+    `PAYTM_MERCHANT_ID = "<YOUR-PAYTM-MERCHANT-ID>"`
+    `PAYTM_CALLBACK_URL = "http://localhost:8000/response/"`
+    
 
 4. Run `python manage.py migrate` to create the paytm models.
 
