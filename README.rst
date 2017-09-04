@@ -6,6 +6,11 @@ Django-Paytm is an application for integrate paytm gateway with your django proj
 
 Fork from here: [paytm-django](https://github.com/harishbisht/paytm-django)
 
+Installation
+-----------
+
+You can install Django-paytm using `pip install django-paytm`
+
 Quick start
 -----------
 
