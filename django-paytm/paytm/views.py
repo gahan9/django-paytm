@@ -1,3 +1,7 @@
+# -*- coding: utf-8 -*-
+
+from __future__ import unicode_literals
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.utils.translation import get_language
@@ -7,13 +11,13 @@ from django.conf import settings
 
 import Checksum
 
-
 from paytm.models import PaytmHistory
-# Create your views here.
+
 
 @login_required
 def home(request):
     return HttpResponse("<html><a href='"+ settings.HOST_URL +"/paytm/payment'>PayNow</html>")
+
 
 @login_required
 def payment(request):
@@ -40,6 +44,7 @@ def payment(request):
         param_dict['CHECKSUMHASH'] = Checksum.generate_checksum(data_dict, MERCHANT_KEY)
         return render(request,"paytm/payment.html",{'paytmdict':param_dict})
     return HttpResponse("Bill Amount Could not find. ?bill_amount=10")
+
 
 @login_required
 @csrf_exempt

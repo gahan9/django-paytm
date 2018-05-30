@@ -1,10 +1,13 @@
+# -*- coding: utf-8 -*-
+
+from __future__ import unicode_literals
+
 import base64
 import string
 import random
 import hashlib
 
 from Crypto.Cipher import AES
-
 
 IV = "@@@@&&&&####$$$$"
 BLOCK_SIZE = 16
@@ -47,6 +50,7 @@ def verify_checksum(param_dict, merchant_key, checksum):
     calculated_checksum = generate_checksum(param_dict, merchant_key, salt=salt)
     return calculated_checksum == checksum
 
+
 def verify_checksum_by_str(param_str, merchant_key, checksum):
     # Remove checksum
     #if 'CHECKSUMHASH' in param_dict:
@@ -57,7 +61,6 @@ def verify_checksum_by_str(param_str, merchant_key, checksum):
     salt = paytm_hash[-4:]
     calculated_checksum = generate_checksum_by_str(param_str, merchant_key, salt=salt)
     return calculated_checksum == checksum
-
 
 
 def __id_generator__(size=6, chars=string.ascii_uppercase + string.digits + string.ascii_lowercase):

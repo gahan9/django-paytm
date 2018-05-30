@@ -1,10 +1,10 @@
-=====
+============
 Django-Paytm
-=====
+============
 
-Django-Paytm is an application for integrate paytm gateway with your django project.
+Django-Paytm is an application to integrate paytm gateway with your django project.
 
-Fork from here: [paytm-django](https://github.com/harishbisht/paytm-django)
+Forked from here: [paytm-django](https://github.com/harishbisht/paytm-django)
 
 Installation
 -----------
@@ -29,16 +29,17 @@ Quick start
 
 3. Put below variables into your settings file.
 
-    `PAYTM_MERCHANT_KEY=  "<YOUR-PAYTM-MERCHANT-KEY>"`
+    PAYTM_MERCHANT_KEY=  "<YOUR-PAYTM-MERCHANT-KEY>"
 
-    `PAYTM_MERCHANT_ID = "<YOUR-PAYTM-MERCHANT-ID>"`
+    PAYTM_MERCHANT_ID = "<YOUR-PAYTM-MERCHANT-ID>"
 
-    `PAYTM_CALLBACK_URL = "http://localhost:8000/response/"`
+    PAYTM_CALLBACK_URL = "http://localhost:8000/response/"
 
+4. Migrate and create paytm models.
 
-4. Run `python manage.py migrate` to create the paytm models.
+    python manage.py migrate
 
-5. ### Stuff used to make this:
+5. Paytm reference APIs and SDK:
 
- * [PAYTM API DOCUMENTATION](http://paywithpaytm.com/developer/paytm_api_doc/)
- * [SDK DOCUMENTATION](http://paywithpaytm.com/developer/paytm_sdk_doc/)
+    [PAYTM API DOCUMENTATION](http://paywithpaytm.com/developer/paytm_api_doc/)
+    [SDK DOCUMENTATION](http://paywithpaytm.com/developer/paytm_sdk_doc/)
